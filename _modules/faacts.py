@@ -17,27 +17,20 @@ def rest(**kwargs):
       salt minion faacts.rest something
   '''
   restargs = {}
-  for name in ['path', 'method', 'username', 'password', '', 'binddn','bindpw', 'anonymous']:
+  for name in ['path', 'method', 'username', 'password']:
     restargs[name] = _config(name, **kwargs)
     
-  query(
-    "http://155.178.172.254:8188/cxf/slc/NCRServices?ncr_service=wfs",
-    method="POST",
+  query( "http://155.178.172.254:8188/cxf/slc/NCRServices?ncr_service=wfs",
+          method="POST",
 	  status=True,
 	  headers=False,
 	  text=False,
 	  username="ncr_test_ext2",
 	  password="4Sk1K8s3q9h7uJr",
-    header_file="/tmp/headers.txt",
+          header_file="/tmp/headers.txt",
 	  data_file="/tmp/data.txt",
 	  text_out="/tmp/data_response.txt",
 	  headers_out="/tmp/headers_response.txt",
   )
   
   
-  log.debug(signs)
-  return_value = {}
-  signs = signs.split(',')
-  for sign in signs:
-    return_value[sign] = _make_request(sign)
-  return return_value
