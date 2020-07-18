@@ -1,6 +1,6 @@
+import salt
 import query from salt.utils.http
 import logging
-import salt
 #log = logging.getLogger(__name__)
 
 __virtual_name__ = 'faacts'
@@ -16,9 +16,9 @@ def rest(**kwargs):
 
       salt minion faacts.rest something
   '''
-  restargs = {}
-  for name in ['path', 'method', 'username', 'password']:
-    restargs[name] = _config(name, **kwargs)
+  #restargs = {}
+  #for name in ['path', 'method', 'username', 'password']:
+  #  restargs[name] = _config(name, **kwargs)
     
   query( "http://155.178.172.254:8188/cxf/slc/NCRServices?ncr_service=wfs",
           method="POST",
