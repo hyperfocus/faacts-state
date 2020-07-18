@@ -1,7 +1,7 @@
 import query from salt.utils.http
 import logging
 
-log = logging.getLogger(__name__)
+#log = logging.getLogger(__name__)
 
 __virtual_name__ = 'faacts'
 
