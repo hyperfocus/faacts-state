@@ -6,5 +6,5 @@ def __virtual__():
   return __virtual_name__
 
 
-def hello()
+def hello():
     return "hello world"
