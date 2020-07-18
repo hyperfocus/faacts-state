@@ -1,5 +1,5 @@
 import salt
-import query from salt.utils.http
+import salt.utils.http.query
 import logging
 #log = logging.getLogger(__name__)
 
@@ -20,7 +20,7 @@ def rest(**kwargs):
   #for name in ['path', 'method', 'username', 'password']:
   #  restargs[name] = _config(name, **kwargs)
     
-  query( "http://155.178.172.254:8188/cxf/slc/NCRServices?ncr_service=wfs",
+  salt.utils.http.query( "http://155.178.172.254:8188/cxf/slc/NCRServices?ncr_service=wfs",
           method="POST",
 	  status=True,
 	  headers=False,
