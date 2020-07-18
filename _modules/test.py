@@ -7,4 +7,4 @@ def __virtual__():
 
 
 def hello():
-    return "hello world"
+    return "hello " + __pillar__['ipport']
