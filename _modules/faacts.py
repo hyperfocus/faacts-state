@@ -29,7 +29,7 @@ def rest(**kwargs):
 	  password="4Sk1K8s3q9h7uJr",
           header_file="/tmp/headers.txt",
 	  data_file="/tmp/data.txt",
-          backend="urllib2",
+          backend="requests",
   )
   # ext_out="/tmp/data_response.txt"
   # headers_out="/tmp/headers_response.txt"
