@@ -24,12 +24,12 @@ def rest(**kwargs):
           method="POST",
 	  status=True,
 	  headers=True,
-	  text=True,
+	  text=False,
 	  username="ncr_test_ext2",
 	  password="4Sk1K8s3q9h7uJr",
           header_file="/tmp/headers.txt",
 	  data_file="/tmp/data.txt",
-          backend="urllib2",
+          backend="requests",
   )
   return ret['headers']
   # ext_out="/tmp/data_response.txt"
