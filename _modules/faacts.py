@@ -23,13 +23,13 @@ def rest(**kwargs):
   return http.query( "http://155.178.172.254:8188/cxf/slc/NCRServices?ncr_service=wfs",
           method="POST",
 	  status=True,
-	  headers=True,
+	  headers=False,
 	  text=True,
+          decode=False,
 	  username="ncr_test_ext2",
 	  password="4Sk1K8s3q9h7uJr",
           header_file="/tmp/headers.txt",
 	  data_file="/tmp/data.txt",
-          stream=True,
           backend="requests",
   )
   # ext_out="/tmp/data_response.txt"
