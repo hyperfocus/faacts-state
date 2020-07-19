@@ -1,4 +1,4 @@
-#import salt
+import salt
 import salt.utils.http as http
 import logging
 #log = logging.getLogger(__name__)
