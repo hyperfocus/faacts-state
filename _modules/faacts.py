@@ -23,7 +23,7 @@ def rest(**kwargs):
   ret = http.query( "http://155.178.172.254:8188/cxf/slc/NCRServices?ncr_service=wfs",
           method="POST",
 	  status=True,
-	  headers=False,
+	  headers=True,
 	  text=True,
 	  username="ncr_test_ext2",
 	  password="4Sk1K8s3q9h7uJr",
