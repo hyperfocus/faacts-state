@@ -23,9 +23,8 @@ def rest(**kwargs):
   #  restargs[name] = _config(name, **kwargs)
     
   with open('/tmp/data.txt','rb') as payload:
-    headers = {'Content-Type': 'application/xml', 'Expect': '100-continue', 'NWC_Request_Sent_Time': 'today'}
-    r = requests.post('http://155.178.172.254:8188/cxf/slc/NCRServices?ncr_service=wfs', 
+    r = requests.post('http://%s/cxf/slc/NCRServices?ncr_service=wfs' % __pillar__['ipport'], 
         auth=HTTPBasicAuth('ncr_test_ext2', '4Sk1K8s3q9h7uJr'), 
-        data=payload, verify=False, headers=headers)
+        data=payload, verify=False, headers=__pillar__['headers'])
 
   return "headers: " + str(r.headers)
