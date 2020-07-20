@@ -27,4 +27,4 @@ def rest(**kwargs):
         auth=HTTPBasicAuth('ncr_test_ext2', '4Sk1K8s3q9h7uJr'), 
         data=payload, verify=False, headers=__pillar__['headers'])
 
-  return "headers: " + str(r.headers)
+  return "headers: " + json.dumps(dict(r.headers))
