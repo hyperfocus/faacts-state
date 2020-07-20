@@ -1,7 +1,8 @@
-import salt
 import requests
 from requests.auth import HTTPBasicAuth
 import logging
+import json
+
 #log = logging.getLogger(__name__)
 
 __virtual_name__ = 'faacts'
@@ -27,4 +28,4 @@ def rest(**kwargs):
         auth=HTTPBasicAuth('ncr_test_ext2', '4Sk1K8s3q9h7uJr'), 
         data=payload, verify=False, headers=headers)
 
-  return r.headers
+  return "headers: " + json.dumps(r.headers)
