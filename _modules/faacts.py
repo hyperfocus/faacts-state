@@ -28,4 +28,4 @@ def rest(**kwargs):
         auth=HTTPBasicAuth('ncr_test_ext2', '4Sk1K8s3q9h7uJr'), 
         data=payload, verify=False, headers=headers)
 
-  return "headers: " + json.dumps(r.headers)
+  return "headers: " + str(r.headers)
